@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//  rest API를 사용하기 위해 선언 
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+//  JPA API를 사용하기 위해 선언
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//  H2 데이터베이스를 사용하기 위해 선언
+    runtimeOnly 'com.h2database:h2'
+
+//  Lombok 라이브러리 사용 선언
+    annotationProcessor("org.projectlombok:lombok")
+    compileOnly("org.projectlombok:lombok")
+}
+
+test {
+    useJUnitPlatform()
+}
