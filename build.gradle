@@ -22,6 +22,9 @@ dependencies {
 //  Lombok 라이브러리 사용 선언
     annotationProcessor("org.projectlombok:lombok")
     compileOnly("org.projectlombok:lombok")
+
+//  TEST에 필요한 라이브러리
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
 test {
